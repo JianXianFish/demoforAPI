@@ -1,7 +1,7 @@
 const router = require('koa-router')();
 const ArtileController = require('../controllers/article');
 
-router.prefix('/api/v1')
+router.prefix('/api/')
 
 /**
  * 文章接口
@@ -10,6 +10,6 @@ router.prefix('/api/v1')
 router.post('/article/create', ArtileController.create);
 
 //获取文章详情
-router.get('/article/:id', ArtileController.detail)
+router.get('/article/:id', ArtileController.detail);
 
 module.exports = router
